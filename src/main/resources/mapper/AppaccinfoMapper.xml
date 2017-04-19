@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mantou.server.mapper.AppaccinfoMapper">
+
+    <select id="getAppaccinfo" resultType="com.mantou.server.entity.wechat.AppaccinfoVO">
+        SELECT id,url_userinfo,acct_name,appid,secret,encodingaeskey,ticket,
+        ticket_expire,url_follow,url_oauth,url_callback,url_token,url_oauth_token,url_ticket,url_auth,url_refresh_token FROM app_acctinfo WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+
+</mapper>
